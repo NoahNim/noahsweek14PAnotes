@@ -14,7 +14,7 @@ function FruitForm({ fruits }) {
   const [name, setName] = useState(""); //sets the initial state of the name input in the form to be blank
   const [color, setColor] = useState(COLORS[0]); //sets the initial state of the color selector in the form to be red, since it's the first element in the COLORS array we can access it with COLORS[0]. However, because COLORS will never change we could do useState("red") as well and that will pass the specs
   const [sweetness, setSweetness] = useState(1); //sets the initial state of the sweetness input to be 1. If you put 2, 3 etc on in here that is what would appear on the form but the test wants it to be 1. 
-  const [seeds, setSeeds] = useState("yes"); //sets the initial state of the seeds radio button to be 1.
+  const [seeds, setSeeds] = useState("yes"); //sets the initial state of the seeds radio button to be yes.
   const [errors, setErrors] = useState([]); //creates an empty array to store errors in, its initial state is empty
   const history = useHistory(); //this creates a history variable so we can redirect
   const fruitNames = fruits.map(fruit => fruit.name ) //this grabs the fruits prop and grabs each fruit by its name, storing them in fruitNames
